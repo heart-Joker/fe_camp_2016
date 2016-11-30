@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task2</title>
+    <style>
+        body{
+            background-image: url("image/bw-bg.png");
+            background-size: cover;
+            white-space: nowrap;
+        }
+        #first{
+            background-image: url("image/btn-gray.png");
+            background-size: cover;
+            color:#3bdfdf;
+        }
+        #second{
+            background-image: url("image/btn-blue.png");
+            background-size: cover;
+        }
+        div{
+            display: inline-block;
+        }
+        #bt{
+            position: relative;
+            left: 300px;
+            bottom: 200px;
+        }
+        button{
+            font-size: 28px;
+            height: 50px;
+            margin-top: 80px;
+            width: 200px;
+            display: block;
+            border-radius: 3px 3px 3px;
+        }
+    </style>
+    <script>
+        function change1() {
+            var x=document.getElementById("first");
+            x.style.backgroundImage="url('image/btn-blue.png')";
+            x.style.color="black";
+            document.body.style.backgroundImage='url("image/xx-bg.png")';
+            document.getElementById("img").src="image/xx.png";
+            document.getElementById("second").style.backgroundImage="url('image/btn-gray.png')";
+            document.getElementById("second").style.color="#3bdfdf";
+        }
+        function change2() {
+            var x=document.getElementById("second");
+            x.style.backgroundImage="url('image/btn-blue.png')";
+            x.style.color="black";
+            document.body.style.backgroundImage='url("image/bw-bg.png")';
+            document.getElementById("img").src="image/bw.png";
+            document.getElementById("first").style.backgroundImage="url('image/btn-gray.png')";
+            document.getElementById("first").style.color="#3bdfdf";
+        }
+    </script>
+</head>
+<body>
+    <div style="margin-top: 200px;margin-left: 15%;">
+        <div style="height: 400px;width: 300px;margin-top: 0px;margin-left: 20%">
+        <img id="img" src="image/bw.png" style="display: inline-block;margin-left: 20%;height: 400px;width: 300px;">
+        </div>
+        <div id="bt">
+            <button id="first" onclick="change1()">小新</button>
+            <button id="second" onclick="change2()">巴卫</button>
+        </div>
+    </div>
+</body>
+</html>
